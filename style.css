@@ -134,9 +134,10 @@ h3 {
 }
 
 h1 {
-  max-width: 46rem;
-  font-size: clamp(2.15rem, 5.8vw, 4.45rem);
-  letter-spacing: -0.018em;
+  max-width: 43rem;
+  font-size: clamp(1.75rem, 4.3vw, 3.15rem);
+  line-height: 1.16;
+  letter-spacing: -0.012em;
 }
 
 h2 {
@@ -153,10 +154,10 @@ p {
 
 .lead {
   max-width: 39rem;
-  margin-top: 2rem;
+  margin-top: 1.6rem;
   color: var(--muted);
-  font-size: clamp(1.2rem, 2.4vw, 1.55rem);
-  line-height: 1.48;
+  font-size: clamp(1.1rem, 2.1vw, 1.4rem);
+  line-height: 1.5;
 }
 
 .section-intro {
