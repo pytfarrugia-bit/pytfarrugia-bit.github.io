@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'en-GB' }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#263129">
+    <meta name="description" content="{{ page.description | default: site.description | escape }}">
+    <title>{% if page.title and page.title != site.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  </head>
+  <body>
+    <a class="skip-link" href="#content">Skip to content</a>
+    <header class="site-header">
+      <div class="shell masthead">
+        <a class="identity" href="{{ '/' | relative_url }}" aria-label="Peter M. Farrugia, home">
+          <span class="monogram" aria-hidden="true">PMF</span>
+          <span><strong>Peter M. Farrugia</strong><small>Talks · Writing · Research</small></span>
+        </a>
+        <nav aria-label="Primary navigation">
+          <a href="{{ '/' | relative_url }}">About</a>
+          <a href="{{ '/writings/' | relative_url }}">Writings</a>
+          <a href="{{ '/projects/' | relative_url }}">Projects</a>
+          <a href="{{ '/publications/' | relative_url }}">Publications</a>
+          <a href="{{ '/contact/' | relative_url }}">Contact</a>
+        </nav>
+      </div>
+    </header>
+    <main id="content" class="shell page">{{ content }}</main>
+    <footer class="site-footer">
+      <div class="shell footer-grid">
+        <p>Peter M. Farrugia</p>
+        <p>An independent archive of talks, writing, research and projects.</p>
+        <p>© {{ 'now' | date: '%Y' }}</p>
+      </div>
+    </footer>
+  </body>
+</html>
+
