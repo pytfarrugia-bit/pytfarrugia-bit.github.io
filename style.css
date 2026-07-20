@@ -85,6 +85,7 @@ section {
 
 .eyebrow,
 .quiet,
+.project-type,
 footer {
   color: var(--muted);
   font-family: Arial, Helvetica, sans-serif;
@@ -94,7 +95,8 @@ footer {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   margin: 0 0 1.25rem;
   line-height: 1.1;
   font-weight: 500;
@@ -108,6 +110,10 @@ h2 {
   font-size: clamp(2rem, 5vw, 3.2rem);
 }
 
+h3 {
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+}
+
 p {
   margin: 0 0 1rem;
 }
@@ -115,6 +121,43 @@ p {
 .lead {
   font-size: clamp(1.25rem, 2.5vw, 1.6rem);
   line-height: 1.45;
+}
+
+.project-entry {
+  padding: 1.6rem 0 0;
+}
+
+.project-entry h3 a {
+  color: var(--ink);
+  text-decoration-color: var(--rule);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+.project-entry h3 a:hover,
+.project-entry h3 a:focus-visible {
+  color: var(--red);
+  text-decoration-color: var(--red);
+}
+
+.project-type {
+  margin-bottom: 0.65rem;
+}
+
+.project-link {
+  color: var(--red);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.project-link:hover,
+.project-link:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 0.25rem;
 }
 
 footer {
