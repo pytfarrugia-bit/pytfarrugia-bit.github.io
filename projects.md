@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Projects
-description: Research, artistic and devotional projects by Peter M. Farrugia.
+description: Research, artistic and devotional projects by Peter Marc Farrugia.
 permalink: /projects/
 ---
 
@@ -13,4 +13,3 @@ permalink: /projects/
   <article class="project"><p class="field">Theology · Practice</p><h3>Sodality of Holy Saturday</h3><p>A developing devotional and theological project concerned with abiding, restraint and faithful presence where completion cannot be claimed.</p></article>
   <article class="project"><p class="field">Music · Prayer</p><h3>Motus Mariae</h3><p>An exploration of Marian song, modal practice and simple instruments as forms of recollection, accompaniment and prayer.</p></article>
 </div>
-

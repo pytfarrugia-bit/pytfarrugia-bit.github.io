@@ -1,4 +1,4 @@
-# Peter M. Farrugia
+# Peter Marc Farrugia
 
 Source files for [pytfarrugia-bit.github.io](https://pytfarrugia-bit.github.io), an archive of talks, writing, research and selected projects.
 

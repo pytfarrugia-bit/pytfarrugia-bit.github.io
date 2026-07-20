@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Writings
-description: Essays, chapters and working papers by Peter M. Farrugia.
+description: Essays, chapters and working papers by Peter Marc Farrugia.
 permalink: /writings/
 ---
 
@@ -12,4 +12,3 @@ permalink: /writings/
   <article class="archive-item"><div class="meta">Psychotherapy · Myth</div><div><h3>After the Chase</h3><p>A reading of contact and constraint in the First Branch of the <em>Mabinogi</em>, attending to pursuit, agency and the ethics of approach.</p></div></article>
   <article class="archive-item"><div class="meta">Symbol · Theology</div><div><h3>Notes on sacramental imagination</h3><p>Shorter work on Christian symbolism, material signs and the disciplined use of analogy.</p></div></article>
 </div>
-

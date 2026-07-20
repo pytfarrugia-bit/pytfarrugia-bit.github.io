@@ -1,13 +1,13 @@
 ---
 layout: default
-title: Peter M. Farrugia
-description: About Peter M. Farrugia, a Maltese psychotherapist and theological researcher.
+title: Peter Marc Farrugia
+description: About Peter Marc Farrugia, a Maltese psychotherapist and theological researcher.
 ---
 
 <section class="hero">
   <div>
     <p class="eyebrow">About</p>
-    <h1>Peter M. Farrugia</h1>
+    <h1>Peter Marc Farrugia</h1>
     <p class="lede">Psychotherapist and theological researcher working where Catholic theology, trauma, safeguarding, symbolic thought and the arts meet.</p>
   </div>
   <aside class="hero-note">
@@ -19,7 +19,7 @@ description: About Peter M. Farrugia, a Maltese psychotherapist and theological 
 <hr class="rule">
 
 <section class="intro">
-  <p>Peter M. Farrugia is a Maltese Gestalt psychotherapist and doctoral researcher in theology at St Mary’s University, Twickenham.</p>
+  <p>Peter Marc Farrugia is a Maltese Gestalt psychotherapist and doctoral researcher in theology at St Mary’s University, Twickenham.</p>
   <p>His research asks how the Church should remember, judge and remain answerable after abuse. It brings Catholic theology into sustained conversation with trauma theory, psychotherapy and safeguarding practice. His wider work attends to myth, sacramental imagination, Christian symbolism, visual art and music.</p>
 </section>
 
@@ -31,4 +31,3 @@ description: About Peter M. Farrugia, a Maltese psychotherapist and theological 
     <article class="card"><span class="number">03</span><h3>Publications</h3><p>A concise record of publications, lectures, conferences and exhibitions.</p><a href="{{ '/publications/' | relative_url }}">View record</a></article>
   </div>
 </section>
-

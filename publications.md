@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Publications
-description: Selected publications, lectures and exhibitions by Peter M. Farrugia.
+description: Selected publications, lectures and exhibitions by Peter Marc Farrugia.
 permalink: /publications/
 ---
 
@@ -14,4 +14,3 @@ permalink: /publications/
 </div>
 
 <p class="notice">This opening record is selective. Formal citations, links and downloadable texts will be added as the archive is assembled.</p>
-

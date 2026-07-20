@@ -1,5 +1,5 @@
-title: Peter M. Farrugia
-description: Talks, writing, research and selected projects by Peter M. Farrugia.
+title: Peter Marc Farrugia
+description: Talks, writing, research and selected projects by Peter Marc Farrugia.
 url: https://pytfarrugia-bit.github.io
 baseurl: ""
 lang: en-GB
@@ -7,4 +7,3 @@ markdown: kramdown
 permalink: pretty
 exclude:
   - README.md
-
