@@ -119,7 +119,7 @@ footer {
 }
 
 .eyebrow {
-  margin-bottom: 1rem;
+  margin-bottom: 0.9rem;
   color: var(--red);
   font-weight: 700;
   letter-spacing: 0.16em;
@@ -134,10 +134,10 @@ h3 {
 }
 
 h1 {
-  max-width: 43rem;
-  font-size: clamp(1.75rem, 4.3vw, 3.15rem);
-  line-height: 1.16;
-  letter-spacing: -0.012em;
+  max-width: 40rem;
+  font-size: clamp(1.3rem, 2.5vw, 2rem);
+  line-height: 1.32;
+  letter-spacing: 0;
 }
 
 h2 {
@@ -153,11 +153,11 @@ p {
 }
 
 .lead {
-  max-width: 39rem;
-  margin-top: 1.6rem;
+  max-width: 38rem;
+  margin-top: 1.25rem;
   color: var(--muted);
-  font-size: clamp(1.1rem, 2.1vw, 1.4rem);
-  line-height: 1.5;
+  font-size: clamp(1rem, 1.6vw, 1.18rem);
+  line-height: 1.55;
 }
 
 .section-intro {
