@@ -153,9 +153,7 @@ p {
   margin: 0 0 1rem;
 }
 
-main p,
-main li,
-main blockquote {
+.bio-page .prose p {
   text-align: justify;
   text-justify: inter-word;
   hyphens: auto;
