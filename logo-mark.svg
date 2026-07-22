@@ -1,13 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-labelledby="title desc">
   <title id="title">Peter Marc Farrugia marque</title>
-  <desc id="desc">A celadon marque inspired by the Processional Cross of Herat.</desc>
-  <g transform="translate(0 10)" stroke="#7f9f8c" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <desc id="desc">A terracotta marque inspired by the Processional Cross of Herat.</desc>
+  <g transform="translate(0 10)" stroke="#8c4938" fill="none" stroke-linecap="round" stroke-linejoin="round">
     <path d="M100 40V150" stroke-width="24"/>
     <path d="M42 76H158" stroke-width="24"/>
     <path d="M100 150C58 150 36 120 46 94C52 78 68 72 86 84" stroke-width="21"/>
     <path d="M100 150C142 150 164 120 154 94C148 78 132 72 114 84" stroke-width="21"/>
   </g>
-  <g transform="translate(0 10)" fill="#7f9f8c">
+  <g transform="translate(0 10)" fill="#8c4938">
     <circle cx="100" cy="40" r="20"/>
     <circle cx="42" cy="76" r="20"/>
     <circle cx="158" cy="76" r="20"/>
