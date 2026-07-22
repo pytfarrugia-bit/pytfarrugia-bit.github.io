@@ -1,12 +1,12 @@
 :root {
-  --paper: #e7d8b2;
-  --paper-deep: #d7c18a;
-  --ink: #20231d;
-  --muted: #665d49;
-  --rule: #b4934d;
-  --red: #9d3027;
-  --gold: #ad781c;
-  --dark: #29302c;
+  --paper: #d6d0c8;
+  --paper-deep: #c7c0b7;
+  --ink: #2c302e;
+  --muted: #646963;
+  --rule: #8da394;
+  --red: #8c4938;
+  --gold: #3f6250;
+  --dark: #2c302e;
   --measure: 48rem;
 }
 
@@ -20,7 +20,7 @@ html {
 
 body {
   margin: 0;
-  border-top: 0.42rem solid var(--red);
+  border-top: 0.42rem solid var(--gold);
   background: var(--paper);
   color: var(--ink);
   font-family: Georgia, "Times New Roman", serif;
@@ -58,14 +58,10 @@ body {
   width: 3.15rem;
   height: 3.15rem;
   flex: 0 0 auto;
-  border: 1px solid var(--red);
-  outline: 1px solid var(--gold);
-  outline-offset: 2px;
-  background-color: var(--dark);
-  background-image: url("https://commons.wikimedia.org/wiki/Special:FilePath/Valcavado%20Beatus%20f.%20145v%20-%20Lamb%20at%20Sion.jpg?width=900");
-  background-repeat: no-repeat;
-  background-size: 559% 787%;
-  background-position: 41.9% 39.8%;
+  border: 0;
+  outline: 0;
+  background: none;
+  object-fit: contain;
 }
 
 nav {
@@ -86,7 +82,7 @@ nav a {
 nav a:hover,
 nav a:focus-visible,
 nav a[aria-current="page"] {
-  color: var(--red);
+  color: var(--gold);
   text-decoration: underline;
   text-underline-offset: 0.25rem;
 }
@@ -121,7 +117,7 @@ footer {
 
 .eyebrow {
   margin-bottom: 0.9rem;
-  color: var(--red);
+  color: var(--gold);
   font-weight: 700;
   letter-spacing: 0.16em;
 }
@@ -130,6 +126,7 @@ h1,
 h2,
 h3 {
   margin: 0 0 1.25rem;
+  color: var(--red);
   line-height: 1.1;
   font-weight: 500;
 }
@@ -184,7 +181,7 @@ p {
 }
 
 .project-entry h3 a {
-  color: var(--ink);
+  color: var(--red);
   text-decoration-color: var(--rule);
   text-decoration-thickness: 1px;
   text-underline-offset: 0.18em;
@@ -192,8 +189,8 @@ p {
 
 .project-entry h3 a:hover,
 .project-entry h3 a:focus-visible {
-  color: var(--red);
-  text-decoration-color: var(--red);
+  color: var(--gold);
+  text-decoration-color: var(--gold);
 }
 
 .project-type {
@@ -204,7 +201,7 @@ p {
 .publication-link,
 .text-link,
 .page-return a {
-  color: var(--red);
+  color: var(--gold);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 0.8rem;
   font-weight: 700;
@@ -279,7 +276,7 @@ p {
 .prose blockquote {
   margin: 2rem 0;
   padding: 1.2rem 1.4rem;
-  border-left: 0.22rem solid var(--red);
+  border-left: 0.22rem solid var(--gold);
   background: color-mix(in srgb, var(--paper-deep) 55%, transparent);
   font-size: 1.12rem;
   line-height: 1.55;
@@ -300,7 +297,7 @@ footer {
 }
 
 ::selection {
-  background: var(--red);
+  background: var(--gold);
   color: var(--paper);
 }
 
