@@ -148,9 +148,6 @@ h3 {
 
 p {
   margin: 0 0 1rem;
-}
-
-.bio-page .prose p {
   text-align: justify;
   text-justify: inter-word;
   hyphens: auto;
