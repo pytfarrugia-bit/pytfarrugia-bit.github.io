@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<title>D Dorian — A Just Board</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="d-dorian-board.css">
+</head>
+<body>
+<header>
+  <h1>D Dorian — <em>a just board</em></h1>
+  <div class="sub" id="subline">tuning D A G · just intonation to the D drone · 1/1 = 146.83 Hz</div>
+  <div class="legend">
+    <span><i class="dot brass"></i> the ground — D &amp; A</span>
+    <span><i class="dot jade"></i> the signature — F (6/5) &amp; B (5/3)</span>
+    <span><i class="dot ghost"></i> outside the mode</span>
+  </div>
+</header>
+
+<div class="controls">
+  <div class="cgroup">
+    <span class="clabel">View</span>
+    <div class="seg" id="seg-view"><button data-v="board" class="sel">Board</button><button data-v="playalong">Play-along</button></div>
+  </div>
+  <div class="cgroup">
+    <span class="clabel">Tuning</span>
+    <div class="seg" id="seg-tuning"><button data-t="just" class="sel">Just</button><button data-t="equal">Equal</button><button data-t="custom">Custom</button></div>
+  </div>
+  <div class="cgroup">
+    <span class="clabel">Reference (open D)</span>
+    <div class="ref">
+      <button class="stepbtn" onclick="trimRef(-5)" title="down 5 cents">−</button>
+      <span class="hz" id="ref-hz">146.83 Hz</span>
+      <button class="stepbtn" onclick="trimRef(5)" title="up 5 cents">+</button>
+      <button class="linkbtn" id="calib-btn" onclick="calibrate()">Calibrate from mic</button>
+    </div>
+  </div>
+  <div class="cgroup">
+    <span class="clabel">Modes</span>
+    <div class="ref">
+      <button class="linkbtn" id="noter-btn" onclick="toggleNoter()">Noter: off</button>
+      <button class="linkbtn" id="listen-btn" onclick="toggleListen()">Listen: off</button>
+    </div>
+  </div>
+</div>
+
+<div class="editor" id="editor"></div>
+
+<h2>The ground</h2>
+<p class="hint">Tap a string to drone it; both is the open fifth. Spacebar toggles both, Escape stops. The strings glow when a played note rings them sympathetically.</p>
+<div class="ground">
+  <div class="drone-string" id="drone-D3" tabindex="0" role="button" aria-pressed="false"><div class="lbl">D</div><div class="meta">bass drone · 1/1</div></div>
+  <div class="drone-string" id="drone-A3" tabindex="0" role="button" aria-pressed="false"><div class="lbl">A</div><div class="meta">middle drone · 3/2</div></div>
+  <div class="ground-aux"><button class="linkbtn" onclick="stopAllDrones()">Stop drones</button></div>
+</div>
+
+<div class="meter" id="meter">
+  <div class="row">
+    <div><div class="sub2">nearest degree</div><div class="big" id="m-deg">—</div></div>
+    <div><div class="sub2">deviation from just</div><div class="cents lock" id="m-cents">— ¢</div></div>
+    <div><div class="sub2" id="m-hz">listening…</div></div>
+  </div>
+  <div class="dialwrap"><div class="dial"><div class="mid"></div><div class="needle" id="m-needle"></div></div></div>
+  <div class="beats"><span>beats vs D: <b id="m-beatD">—</b></span><span>beats vs A: <b id="m-beatA">—</b></span></div>
+  <div class="msg" id="m-msg"></div>
+</div>
+
+<section id="board-section">
+  <h2>The board</h2>
+  <p class="hint">Click a fret to pluck it. Hold a key to sustain — melody 1–8, middle Q–I, bass A–K. Each fret shows its just interval above D.</p>
+  <div class="board-wrap"><table class="board"><thead><tr id="fret-head"></tr></thead><tbody id="board-body"></tbody></table></div>
+</section>
+
+<section id="harmony-section">
+  <h2>The seven triads</h2>
+  <p class="hint">The tonic Dm and the major III (F) and IV (G) lock against the drone; the others carry the comma.</p>
+  <div class="chord-grid" id="chord-grid"></div>
+  <h2>Sequences</h2>
+  <div class="seq" id="seq"></div>
+</section>
+
+<h2>Ear-first phrases</h2>
+<p class="hint">Drone-relative shapes to imitate by ear, not read. Set the drone, then loop a phrase or use call-and-response — it plays, then leaves an equal silence for you to answer on the wood.</p>
+<div class="transport">
+  <label>Tempo <input type="range" id="tempo" min="40" max="160" value="76"> <span id="tempo-val" class="hz">76</span></label>
+  <label><input type="checkbox" id="cr"> call-and-response</label>
+  <button class="linkbtn" onclick="abCompare()">A/B: just vs equal (last phrase)</button>
+  <button class="linkbtn" onclick="stopTransport()">Stop</button>
+</div>
+<div class="phrase-list" id="phrase-list"></div>
+
+<div class="exercise">
+  <b>Core exercise.</b> Drone D + A, then play <span class="k">1 3 4 6 4 3 1</span> and hear each degree settle.<br>
+  <b>The loop.</b> Hold <span class="k">A+Q+3 → D+Q+7 → F+W+1 → A+Q+3</span> (i → III → IV → i).
+</div>
+
+<div class="ground-aux" style="margin-top:24px"><button class="linkbtn" onclick="window.print()">Print fret-and-ratio card</button></div>
+
+<footer id="foot"></footer>
+<p style="margin-top:1.25rem"><a href="english-cantillation.html" style="color:var(--jade);text-decoration:none">← Back to English Cantillation for the Little Office</a></p>
+<div class="print-card" id="print-card"></div>
+
+<script src="d-dorian-board.js"></script>
+</body>
+</html>
