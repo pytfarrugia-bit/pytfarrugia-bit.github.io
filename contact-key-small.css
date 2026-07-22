@@ -1,0 +1,47 @@
+.contact-action {
+  gap: 0.45rem;
+}
+
+.contact-key {
+  width: 0.5in;
+  height: 0.5in;
+  padding: 0.09in;
+  border-radius: 0.08in;
+  box-shadow:
+    inset 0.012in 0.012in 0.019in rgba(255, 255, 255, 0.92),
+    inset -0.014in -0.014in 0.021in rgba(112, 86, 64, 0.12),
+    0 0.021in 0 #d5c4ae,
+    0 0.038in 0.07in rgba(82, 63, 48, 0.18);
+}
+
+.contact-key::before {
+  inset: 0.038in;
+  border-radius: 0.058in;
+  box-shadow:
+    inset 0.005in 0.005in 0.011in rgba(255, 255, 255, 0.55),
+    inset -0.006in -0.006in 0.013in rgba(111, 84, 63, 0.08);
+}
+
+.contact-key img {
+  width: 0.28in;
+  height: 0.28in;
+}
+
+.contact-key:hover,
+.contact-key:focus-visible {
+  transform: translateY(0.006in);
+  box-shadow:
+    inset 0.01in 0.01in 0.018in rgba(255, 255, 255, 0.9),
+    inset -0.013in -0.013in 0.02in rgba(112, 86, 64, 0.12),
+    0 0.015in 0 #d5c4ae,
+    0 0.03in 0.055in rgba(82, 63, 48, 0.16);
+}
+
+.contact-key:active {
+  transform: translateY(0.02in);
+  box-shadow:
+    inset 0.009in 0.009in 0.016in rgba(255, 255, 255, 0.82),
+    inset -0.011in -0.011in 0.019in rgba(112, 86, 64, 0.14),
+    0 0.004in 0 #d5c4ae,
+    0 0.015in 0.03in rgba(82, 63, 48, 0.13);
+}
