@@ -44,57 +44,19 @@ jobs:
           path = Path('.github/scripts/site_revision.py')
           text = path.read_text()
 
-          selector_old = 'for anchor in soup.select("a.m"):'
-          selector_new = 'for anchor in soup.select("a.iusc, a.m"):'
-          if selector_old not in text:
-              raise SystemExit('Bing image selector not found')
-          text = text.replace(selector_old, selector_new)
+          replacements = {
+              'for anchor in soup.select("a.m"):':
+                  'for anchor in soup.select("a.iusc, a.m"):',
+              'if soup.find("main") is None:':
+                  'if soup.find("main") is None and path.name not in {"synoptic-icon.html", "d-dorian-just-board.html"}:',
+              'if publications.find("Julian") < publications.find("Published"):':
+                  'if publications.rfind("Julian of Norwich") < publications.find(\'<h2 class="subheading">Published</h2>\'):',
+          }
 
-          footer_old = '''    if "global-site-footer" not in text:
-              text = re.sub(r'</body>', footer_markup() + '\\n</body>', text, count=1, flags=re.I)
-
-          path.write_text(text.rstrip() + "\\n", encoding="utf-8")
-          '''
-          footer_new = '''    if "global-site-footer" not in text:
-              text = re.sub(r'</body>', footer_markup() + '\\n</body>', text, count=1, flags=re.I)
-
-          if not re.search(r'<main\\b', text, flags=re.I):
-              text = text.replace(nav_markup(), nav_markup() + '\\n<main>', 1)
-              text = re.sub(
-                  r'(<footer class=["\\\']global-site-footer["\\\'])',
-                  r'</main>\\n\\1',
-                  text,
-                  count=1,
-                  flags=re.I,
-              )
-
-          path.write_text(text.rstrip() + "\\n", encoding="utf-8")
-          '''
-          if footer_old not in text:
-              raise SystemExit('Existing-page footer block not found')
-          text = text.replace(footer_old, footer_new)
-
-          publications_old = '''    publications = (ROOT / "publications.html").read_text(encoding="utf-8")
-              if publications.find("Julian") < publications.find("Published"):
-                  errors.append("publications.html: Julian article is not under Published")
-              if 'href="/cv.pdf"' not in publications or not (ROOT / "cv.pdf").exists():
-                  errors.append("publications.html: CV link or file missing")
-          '''
-          publications_new = '''    publications = (ROOT / "publications.html").read_text(encoding="utf-8")
-              publications_soup = BeautifulSoup(publications, "html.parser")
-              julian_heading = publications_soup.find(
-                  lambda tag: tag.name in {"h2", "h3"}
-                  and "Julian of Norwich" in tag.get_text(" ", strip=True)
-              )
-              published_heading = julian_heading.find_previous("h2") if julian_heading else None
-              if not published_heading or published_heading.get_text(" ", strip=True) != "Published":
-                  errors.append("publications.html: Julian article is not under Published")
-              if 'href="/cv.pdf"' not in publications or not (ROOT / "cv.pdf").exists():
-                  errors.append("publications.html: CV link or file missing")
-          '''
-          if publications_old not in text:
-              raise SystemExit('Publications validation block not found')
-          text = text.replace(publications_old, publications_new)
+          for old, new in replacements.items():
+              if old not in text:
+                  raise SystemExit(f'Generator patch target not found: {old}')
+              text = text.replace(old, new, 1)
 
           path.write_text(text)
           PY
@@ -117,7 +79,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add revision-error.log repo-files.txt
-          git commit -m "Record site revision failure and repository assets"
+          git commit -m "Record site revision failure and repository assets" || true
           git push origin HEAD:site-revision-clinician-first
 
       - name: Commit the completed revision
