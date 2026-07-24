@@ -37,9 +37,25 @@ jobs:
         run: echo "c36fb887f9ac42455689918ee3022013c0a159213e898b3b86ae39f69e4ef6b4  .github/scripts/site_revision.py" | sha256sum --check -
 
       - name: Apply and validate the site revision
-        run: python .github/scripts/site_revision.py
+        run: |
+          if python .github/scripts/site_revision.py > /tmp/site-revision.log 2>&1; then
+            cat /tmp/site-revision.log
+          else
+            cp /tmp/site-revision.log revision-error.log
+            exit 1
+          fi
+
+      - name: Preserve generator failure
+        if: failure()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add revision-error.log
+          git commit -m "Record site revision failure"
+          git push origin HEAD:site-revision-clinician-first
 
       - name: Commit the completed revision
+        if: success()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
