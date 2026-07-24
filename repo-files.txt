@@ -1,0 +1,43 @@
+./.github/scripts/site_revision.py
+./.github/scripts/site_revision.py.gz.b64.part00
+./.github/scripts/site_revision.py.gz.b64.part01
+./.github/scripts/site_revision.py.gz.b64.part02
+./.github/scripts/site_revision.py.gz.b64.part03
+./.github/scripts/site_revision.py.gz.b64.part04
+./.github/workflows/site-revision.yml
+./404.html
+./CNAME
+./README.md
+./_config.yml
+./_layouts/default.html
+./assets/css/style.css
+./bio.html
+./clooney-cover.jpg
+./clooney-cover.svg
+./contact-key-small.css
+./contact.md
+./d-dorian-board-core.js
+./d-dorian-board-ui.js
+./d-dorian-board.css
+./d-dorian-just-board.html
+./english-cantillation.html
+./green-books-devoted.html
+./green-books-helpful-ones.html
+./green-books-hymns-remember.html
+./images/peter-marc-farrugia.jpg
+./index.html
+./index.md
+./logo-mark.svg
+./mesomedes.html
+./projects.md
+./publications.md
+./repo-files.txt
+./revision-error.log
+./site-nav.css
+./style.css
+./synoptic-icon.html
+./writings.md
+
+Image assets:
+./images/peter-marc-farrugia.jpg: JPEG image data, JFIF standard 1.01, aspect ratio, density 1x1, segment length 16, progressive, precision 8, 1073x1200, components 3
+./clooney-cover.jpg:              JPEG image data, JFIF standard 1.01, aspect ratio, density 1x1, segment length 16, baseline, precision 8, 200x305, components 3
