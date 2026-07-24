@@ -15,55 +15,26 @@
 ./clooney-cover.jpg
 ./clooney-cover.svg
 ./contact-key-small.css
-./contact/index.html
-./cv.pdf
+./contact.md
 ./d-dorian-board-core.js
 ./d-dorian-board-ui.js
 ./d-dorian-board.css
 ./d-dorian-just-board.html
-./drawings.html
 ./english-cantillation.html
-./feed.xml
 ./green-books-devoted.html
 ./green-books-helpful-ones.html
 ./green-books-hymns-remember.html
-./green-books.html
-./images/peter-marc-farrugia.jpg
-./images/record-of-nighttime/01-diogenes.jpg
-./images/record-of-nighttime/02-qalb.jpg
-./images/record-of-nighttime/03-hmar.jpg
-./images/record-of-nighttime/04-kjostru.jpg
-./images/record-of-nighttime/05-kristofru.jpg
-./images/record-of-nighttime/06-pjaneta.jpg
-./images/record-of-nighttime/07-bebbuxu-i.jpg
-./images/record-of-nighttime/08-inbid.jpg
-./images/record-of-nighttime/09-relikwa.jpg
 ./index.html
+./index.md
 ./logo-mark.svg
 ./mesomedes.html
-./practice.html
-./privacy.html
-./projects.html
-./projects/index.html
-./publications.html
-./publications/index.html
+./projects.md
+./publications.md
 ./repo-files.txt
 ./revision-error.log
-./site-nav.css
 ./style.css
 ./synoptic-icon.html
-./writing.html
-./writings/index.html
+./writings.md
 
 Image assets:
-./images/record-of-nighttime/04-kjostru.jpg:   JPEG image data, JFIF standard 1.01, aspect ratio, density 1x1, segment length 16, progressive, precision 8, 1216x832, components 3
-./images/record-of-nighttime/01-diogenes.jpg:  JPEG image data, JFIF standard 1.01, aspect ratio, density 1x1, segment length 16, progressive, precision 8, 1800x1335, components 3
-./images/record-of-nighttime/09-relikwa.jpg:   JPEG image data, JFIF standard 1.01, aspect ratio, density 1x1, segment length 16, progressive, precision 8, 980x980, components 3
-./images/record-of-nighttime/05-kristofru.jpg: JPEG image data, JFIF standard 1.01, aspect ratio, density 1x1, segment length 16, progressive, precision 8, 720x590, components 3
-./images/record-of-nighttime/08-inbid.jpg:     JPEG image data, JFIF standard 1.01, aspect ratio, density 1x1, segment length 16, progressive, precision 8, 640x773, components 3
-./images/record-of-nighttime/03-hmar.jpg:      JPEG image data, JFIF standard 1.01, aspect ratio, density 1x1, segment length 16, progressive, precision 8, 1800x1200, components 3
-./images/record-of-nighttime/02-qalb.jpg:      JPEG image data, JFIF standard 1.01, aspect ratio, density 1x1, segment length 16, progressive, precision 8, 534x588, components 3
-./images/record-of-nighttime/07-bebbuxu-i.jpg: JPEG image data, JFIF standard 1.01, aspect ratio, density 1x1, segment length 16, progressive, precision 8, 703x490, components 3
-./images/record-of-nighttime/06-pjaneta.jpg:   JPEG image data, JFIF standard 1.01, aspect ratio, density 1x1, segment length 16, progressive, precision 8, 1500x1000, components 3
-./images/peter-marc-farrugia.jpg:              JPEG image data, JFIF standard 1.01, aspect ratio, density 1x1, segment length 16, progressive, precision 8, 1073x1200, components 3
-./clooney-cover.jpg:                           JPEG image data, JFIF standard 1.01, aspect ratio, density 1x1, segment length 16, baseline, precision 8, 200x305, components 3
+./clooney-cover.jpg: JPEG image data, JFIF standard 1.01, aspect ratio, density 1x1, segment length 16, baseline, precision 8, 200x305, components 3
