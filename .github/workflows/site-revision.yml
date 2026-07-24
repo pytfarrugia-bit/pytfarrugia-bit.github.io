@@ -36,6 +36,19 @@ jobs:
       - name: Verify the restored revision script
         run: echo "c36fb887f9ac42455689918ee3022013c0a159213e898b3b86ae39f69e4ef6b4  .github/scripts/site_revision.py" | sha256sum --check -
 
+      - name: Update the image-search parser
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          path = Path('.github/scripts/site_revision.py')
+          text = path.read_text()
+          old = 'for anchor in soup.select("a.m"):'
+          new = 'for anchor in soup.select("a.iusc, a.m"):'
+          if old not in text:
+              raise SystemExit('Bing image selector not found')
+          path.write_text(text.replace(old, new))
+          PY
+
       - name: Apply and validate the site revision
         run: |
           if python .github/scripts/site_revision.py > /tmp/site-revision.log 2>&1; then
@@ -60,6 +73,7 @@ jobs:
       - name: Commit the completed revision
         if: success()
         run: |
+          rm -f revision-error.log repo-files.txt
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
