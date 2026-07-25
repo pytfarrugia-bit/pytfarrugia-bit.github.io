@@ -245,6 +245,41 @@
   text-align: left;
 }
 
+.marque-note {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin: 2.5rem 0 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid color-mix(in srgb, var(--rule) 82%, transparent);
+}
+
+.marque-note img {
+  display: block;
+  width: 2.8rem;
+  height: 2.8rem;
+  flex: 0 0 auto;
+  object-fit: contain;
+}
+
+.marque-note p {
+  margin: 0;
+  color: var(--muted);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.72rem;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  text-align: left;
+}
+
+.legacy-anchor {
+  display: block;
+  position: relative;
+  top: -2rem;
+  height: 0;
+  visibility: hidden;
+}
+
 @media (max-width: 620px) {
   .home-page .clinical-opening h1,
   .practice-page .article-page > h1 {
