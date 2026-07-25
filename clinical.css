@@ -1,11 +1,22 @@
 /* Clinician-first structure layered over the existing site design. */
 
 .home-page .clinical-opening h1,
-.practice-page .article-page > h1 {
+.article-page > h1 {
   max-width: 44rem;
-  font-size: clamp(2.35rem, 6vw, 4.25rem);
-  line-height: 1.04;
-  letter-spacing: -0.025em;
+  font-size: clamp(1.8rem, 4vw, 2.65rem);
+  line-height: 1.16;
+  letter-spacing: -0.012em;
+}
+
+.home-page section > h2 {
+  font-size: clamp(1.45rem, 3vw, 2rem);
+  line-height: 1.18;
+}
+
+.project-entry h3,
+.publication-entry h3 {
+  font-size: clamp(1.18rem, 2.2vw, 1.55rem);
+  line-height: 1.22;
 }
 
 .opening-copy {
@@ -14,7 +25,8 @@
   color: var(--muted);
   font-size: clamp(1.04rem, 1.8vw, 1.22rem);
   line-height: 1.58;
-  text-align: left;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .opening-actions {
@@ -48,7 +60,11 @@
 
 .practice-summary p,
 .practice-page .prose p,
-.contact-section p,
+.contact-section p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
 .contact-form label,
 .practice-facts dd {
   text-align: left;
@@ -100,8 +116,8 @@
 
 .archive-page > h1 {
   max-width: 44rem;
-  font-size: clamp(2.25rem, 5vw, 3.7rem);
-  line-height: 1.08;
+  font-size: clamp(1.75rem, 4vw, 2.55rem);
+  line-height: 1.16;
 }
 
 .archive-list {
@@ -117,7 +133,8 @@
 .archive-list h2,
 .publication-list h2 {
   margin-bottom: 0.75rem;
-  font-size: clamp(1.35rem, 3vw, 1.9rem);
+  font-size: clamp(1.18rem, 2.2vw, 1.5rem);
+  line-height: 1.22;
 }
 
 .archive-list h2 a {
@@ -269,7 +286,8 @@
   font-size: 0.72rem;
   line-height: 1.5;
   letter-spacing: 0.03em;
-  text-align: left;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .legacy-anchor {
@@ -282,8 +300,9 @@
 
 @media (max-width: 620px) {
   .home-page .clinical-opening h1,
-  .practice-page .article-page > h1 {
-    font-size: clamp(2.05rem, 11vw, 3rem);
+  .article-page > h1,
+  .archive-page > h1 {
+    font-size: clamp(1.72rem, 9vw, 2.3rem);
   }
 
   .practice-facts div {
