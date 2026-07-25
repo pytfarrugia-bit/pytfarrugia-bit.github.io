@@ -1,0 +1,267 @@
+/* Clinician-first structure layered over the existing site design. */
+
+.home-page .clinical-opening h1,
+.practice-page .article-page > h1 {
+  max-width: 44rem;
+  font-size: clamp(2.35rem, 6vw, 4.25rem);
+  line-height: 1.04;
+  letter-spacing: -0.025em;
+}
+
+.opening-copy {
+  max-width: 39rem;
+  margin-top: 1.5rem;
+  color: var(--muted);
+  font-size: clamp(1.04rem, 1.8vw, 1.22rem);
+  line-height: 1.58;
+  text-align: left;
+}
+
+.opening-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.85rem 1.5rem;
+  margin-top: 1.75rem;
+}
+
+.primary-link {
+  display: inline-block;
+  padding: 0.72rem 1rem;
+  border: 1px solid var(--red);
+  border-radius: 0.16rem;
+  background: var(--red);
+  color: var(--paper);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.primary-link:hover,
+.primary-link:focus-visible {
+  background: transparent;
+  color: var(--red);
+}
+
+.practice-summary p,
+.practice-page .prose p,
+.contact-section p,
+.contact-form label,
+.practice-facts dd {
+  text-align: left;
+}
+
+.practice-facts {
+  display: grid;
+  gap: 0;
+  margin: 2rem 0;
+  border-top: 1px solid color-mix(in srgb, var(--rule) 82%, transparent);
+}
+
+.practice-facts div {
+  display: grid;
+  grid-template-columns: minmax(7rem, 0.34fr) 1fr;
+  gap: 1rem;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid color-mix(in srgb, var(--rule) 82%, transparent);
+}
+
+.practice-facts dt {
+  color: var(--gold);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.practice-facts dd {
+  margin: 0;
+}
+
+.practice-facts-compact {
+  margin-top: 1.7rem;
+}
+
+.notice {
+  padding: 1rem 1.1rem;
+  border-left: 0.22rem solid var(--gold);
+  background: color-mix(in srgb, var(--paper-deep) 62%, transparent);
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.archive-page {
+  max-width: var(--measure);
+}
+
+.archive-page > h1 {
+  max-width: 44rem;
+  font-size: clamp(2.25rem, 5vw, 3.7rem);
+  line-height: 1.08;
+}
+
+.archive-list {
+  margin-top: 2.2rem;
+  padding-top: 0;
+  border-top: 1px solid color-mix(in srgb, var(--rule) 82%, transparent);
+}
+
+.archive-list .project-entry:first-child {
+  padding-top: 2rem;
+}
+
+.archive-list h2,
+.publication-list h2 {
+  margin-bottom: 0.75rem;
+  font-size: clamp(1.35rem, 3vw, 1.9rem);
+}
+
+.archive-list h2 a {
+  color: var(--red);
+  text-decoration-color: var(--rule);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+.archive-list h2 a:hover,
+.archive-list h2 a:focus-visible {
+  color: var(--gold);
+  text-decoration-color: var(--gold);
+}
+
+.archive-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.4rem;
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid color-mix(in srgb, var(--rule) 82%, transparent);
+}
+
+.archive-links a {
+  color: var(--gold);
+  font-weight: 700;
+}
+
+.contact-section {
+  text-align: left;
+}
+
+.contact-intro {
+  max-width: 40rem;
+}
+
+.contact-form-wrap {
+  display: grid;
+  grid-template-columns: 3.2rem minmax(0, 1fr);
+  align-items: start;
+  gap: 1.2rem;
+  width: min(100%, 38rem);
+  margin: 1.7rem 0 0;
+}
+
+.contact-mark {
+  display: block;
+  width: 3.2rem;
+  height: 3.2rem;
+  object-fit: contain;
+}
+
+.contact-form {
+  width: 100%;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 1rem;
+  color: var(--muted);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.76rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  display: block;
+  width: 100%;
+  margin-top: 0.35rem;
+  padding: 0.75rem 0.8rem;
+  border: 1px solid var(--rule);
+  border-radius: 0.2rem;
+  background: var(--paper-deep);
+  color: var(--ink);
+  font: inherit;
+  line-height: 1.45;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form button {
+  display: inline-block;
+  padding: 0.72rem 1.15rem;
+  border: 1px solid var(--red);
+  border-radius: 0.2rem;
+  background: var(--red);
+  color: var(--paper);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.contact-form button:hover,
+.contact-form button:focus-visible {
+  background: transparent;
+  color: var(--red);
+}
+
+.form-honeypot {
+  display: none;
+}
+
+.contact-notice {
+  max-width: 38rem;
+  margin-top: 1.4rem;
+}
+
+.page-return {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+@media (max-width: 620px) {
+  .home-page .clinical-opening h1,
+  .practice-page .article-page > h1 {
+    font-size: clamp(2.05rem, 11vw, 3rem);
+  }
+
+  .practice-facts div {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+
+  .contact-form-wrap {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-mark {
+    width: 2.8rem;
+    height: 2.8rem;
+  }
+}
