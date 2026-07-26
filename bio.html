@@ -21,10 +21,12 @@
       margin: 0;
     }
 
-    .bio-portrait img {
+    .bio-portrait img,
+    .bio-portrait object {
       display: block;
       width: 100%;
       height: auto;
+      aspect-ratio: 480 / 594;
       border: 1px solid color-mix(in srgb, var(--rule) 82%, transparent);
     }
 
@@ -74,7 +76,9 @@
         </div>
 
         <figure class="bio-portrait">
-          <img src="peter-marc-farrugia-portrait.svg?v=20260726.3" width="480" height="594" alt="Portrait of Peter Marc Farrugia outdoors." fetchpriority="high">
+          <object data="/peter-marc-farrugia-portrait.svg?v=20260726.4" type="image/svg+xml" width="480" height="594" aria-label="Portrait of Peter Marc Farrugia outdoors.">
+            <img src="/peter-marc-farrugia-portrait.webp?v=20260726.4" width="480" height="594" alt="Peter Marc Farrugia standing outdoors beside a window.">
+          </object>
         </figure>
       </div>
 
