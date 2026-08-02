@@ -2,6 +2,7 @@
 
 .archive-opening {
   padding-bottom: 2.5rem;
+  border-bottom: 0;
 }
 
 .archive-opening h1 {
@@ -18,10 +19,15 @@
 .practice-signpost {
   max-width: 44rem;
   margin: 1.4rem 0 0;
-  padding: 0.9rem 0;
-  border-top: 1px solid color-mix(in srgb, var(--rule) 88%, transparent);
-  border-bottom: 1px solid color-mix(in srgb, var(--rule) 88%, transparent);
+  padding: 1rem 1.15rem;
+  border: 1px solid color-mix(in srgb, var(--rule) 88%, transparent);
+  background: color-mix(in srgb, var(--paper-deep) 34%, transparent);
   color: var(--ink);
+  text-align: left;
+}
+
+.practice-signpost-copy {
+  margin: 0;
   text-align: left;
 }
 
@@ -34,6 +40,12 @@
   letter-spacing: 0.055em;
   text-decoration: none;
   text-transform: uppercase;
+}
+
+.practice-signpost a {
+  display: block;
+  width: fit-content;
+  margin-top: 0.55rem;
 }
 
 .practice-signpost a:hover,
@@ -163,6 +175,7 @@
 
   .practice-signpost {
     margin-top: 1.1rem;
+    padding: 0.9rem 1rem;
   }
 
   .therapy-page .site-name span::after {
