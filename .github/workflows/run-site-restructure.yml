@@ -56,3 +56,5 @@ jobs:
           git add -A
           git commit -m "Restructure archive and psychotherapy practice"
           git push origin HEAD:site-restructure-20260802
+
+# Updated after initial registration so the push trigger is active.
