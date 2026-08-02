@@ -396,6 +396,11 @@ footer {
   color: var(--paper);
 }
 
+/* Legacy archive pages retain their existing markup, but no longer expose the old clinical navigation item. */
+body:not(.therapy-page) nav a[href="practice.html"] {
+  display: none;
+}
+
 @media (max-width: 760px) {
   .site-header {
     align-items: flex-start;
