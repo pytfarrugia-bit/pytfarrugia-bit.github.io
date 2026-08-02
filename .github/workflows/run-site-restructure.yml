@@ -1,17 +1,16 @@
 name: Run proposed site restructure
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - .github/workflows/run-site-restructure.yml
+  issues:
+    types:
+      - opened
 
 permissions:
   contents: write
 
 jobs:
   restructure:
+    if: github.event.issue.title == 'Run site restructure 20260802'
     runs-on: ubuntu-latest
     steps:
       - name: Check out proposal branch
@@ -56,5 +55,3 @@ jobs:
           git add -A
           git commit -m "Restructure archive and psychotherapy practice"
           git push origin HEAD:site-restructure-20260802
-
-# Updated after initial registration so the push trigger is active.
