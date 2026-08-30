@@ -401,6 +401,12 @@ body:not(.therapy-page) nav a[href="practice.html"] {
   display: none;
 }
 
+/* The original Cerkiew.pl image endpoint for the Dionysiou 587 Gethsemane miniature is dead.
+   Replace that image resource with a live copy of the same three-movement composition. */
+img[src="https://wiadomosci.cerkiew.pl/pages/114022_b.jpg"] {
+  content: url("https://i1.wp.com/o-vere.ru/uploads/9b/04/5ade1e08c9b04.jpg");
+}
+
 @media (max-width: 760px) {
   .site-header {
     align-items: flex-start;
